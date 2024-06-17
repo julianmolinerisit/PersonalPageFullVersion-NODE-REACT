@@ -1,0 +1,3 @@
+node_modules
+# Ignorar el directorio build en todo el proyecto
+**/build/
