@@ -132,6 +132,9 @@ const messages = {
 };
 
 export default messages;
+
+
+```
 Personalización
 Para personalizar el contenido del sitio web, edita los archivos en la carpeta src/components/ según tus necesidades.
 
