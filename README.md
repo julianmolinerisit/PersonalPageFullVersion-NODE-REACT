@@ -1,71 +1,147 @@
-# Getting Started with Create React App
+# Mi Sitio Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es el repositorio de un sitio web React, que incluye un carrusel, modales, una sección de portafolio y una sección de contacto. El proyecto utiliza internacionalización para soportar múltiples idiomas.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- Carrusel de imágenes
+- Modales con contenido dinámico
+- Sección de portafolio
+- Formulario de contacto
+- Internacionalización (i18n)
 
-### `npm start`
+## Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Lenguajes de Programación**: JavaScript
+- **Frameworks y Librerías**:
+  - React
+  - React Intl (para internacionalización)
+- **Estilos**:
+  - CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalación
 
-### `npm test`
+1. Clona el repositorio:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone https://github.com/tu-usuario/mi-sitio-web.git
+    ```
 
-### `npm run build`
+2. Navega al directorio del proyecto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    cd mi-sitio-web
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Instala las dependencias:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+## Uso
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Inicia la aplicación:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Estructura del Proyecto
 
-## Learn More
+mi-sitio-web/
+├── public/
+│ ├── index.html
+│ └── ...
+├── src/
+│ ├── components/
+│ │ ├── Carousel/
+│ │ │ ├── Carousel.js
+│ │ │ └── Carousel.css
+│ │ ├── Contact/
+│ │ │ ├── Contact.js
+│ │ │ └── Contact.css
+│ │ ├── Footer/
+│ │ │ ├── Footer.js
+│ │ │ └── Footer.css
+│ │ ├── Header/
+│ │ │ ├── Header.js
+│ │ │ └── Header.css
+│ │ ├── Modal/
+│ │ │ ├── modal_0.js
+│ │ │ ├── modal_1.js
+│ │ │ ├── modal_2.js
+│ │ │ ├── SecondModal.js
+│ │ │ └── Modal.css
+│ │ ├── Portfolio/
+│ │ │ ├── Portfolio.js
+│ │ │ └── Portfolio.css
+│ │ └── ScriptComponent/
+│ │ ├── ScriptComponent.js
+│ │ └── ScriptComponent.css
+│ ├── messages.js
+│ ├── App.js
+│ ├── App.css
+│ └── index.js
+├── .gitignore
+├── README.md
+├── package.json
+└── ...
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+css
+Copiar código
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Internacionalización
 
-### Code Splitting
+Este proyecto utiliza `react-intl` para la internacionalización. Los mensajes se definen en `messages.js`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```javascript
+const messages = {
+    en: {
+        'header.title': 'Welcome to My Website',
+        'header.home': 'Home',
+        'header.about': 'About',
+        'header.services': 'Services',
+        'header.contact': 'Contact',
+        'portfolio.title': 'Portfolio',
+        'contact.title': 'Contact Us',
+        'contact.name': 'Name',
+        'contact.email': 'Email',
+        'contact.message': 'Message',
+        'contact.submit': 'Send Message',
+        'footer.text': '© 2023 My Website. All rights reserved.',
+        'roadmap.item7.contentmodal': 'On February 27, 1812, General Manuel Belgrano raised the newly created Argentine flag on the shores of the Paraná, for the first time. Because of this, Rosario is known as the "Cradle of the Argentine Flag".'
+    },
+    es: {
+        'header.title': 'Bienvenido a Mi Sitio Web',
+        'header.home': 'Inicio',
+        'header.about': 'Acerca de',
+        'header.services': 'Servicios',
+        'header.contact': 'Contacto',
+        'portfolio.title': 'Portafolio',
+        'contact.title': 'Contáctenos',
+        'contact.name': 'Nombre',
+        'contact.email': 'Correo Electrónico',
+        'contact.message': 'Mensaje',
+        'contact.submit': 'Enviar Mensaje',
+        'footer.text': '© 2023 Mi Sitio Web. Todos los derechos reservados.',
+        'roadmap.item7.contentmodal': 'El 27 de febrero de 1812, el General Manuel Belgrano izó por primera vez la recién creada bandera argentina en las orillas del Paraná. Por esto, Rosario es conocida como la "Cuna de la Bandera Argentina".'
+    }
+};
 
-### Analyzing the Bundle Size
+export default messages;
+Personalización
+Para personalizar el contenido del sitio web, edita los archivos en la carpeta src/components/ según tus necesidades.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contribuir
+Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# Personal_Page-React" 
+Haz un fork del repositorio
+Crea una rama (git checkout -b feature/nueva-caracteristica)
+Realiza tus cambios y haz un commit (git commit -am 'Añadir nueva característica')
+Sube tus cambios (git push origin feature/nueva-caracteristica)
+Abre un Pull Request
+Licencia
+Este proyecto está licenciado bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
